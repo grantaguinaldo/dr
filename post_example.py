@@ -18,4 +18,4 @@ POST_JSON = {
 json_data = r.post('https://dr-prototype-api.herokuapp.com/api', json=POST_JSON).json()
 
 data_dict = {"sim": json_data['sim'], "request": json_data['request'], "url": json_data['url']}
-pd.DataFrame(data_dict)
+pd.DataFrame(data_dict).sort_values(by='sim', ascending=False)
