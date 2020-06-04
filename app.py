@@ -9,6 +9,10 @@ stop = set(stopwords.words('english'))
 
 app = Flask(__name__)
 
+@app.route('/')
+def index():
+    return 'Welcome to the Dev API!'
+
 @app.route('/api', methods=['POST'])
 def main():
     
